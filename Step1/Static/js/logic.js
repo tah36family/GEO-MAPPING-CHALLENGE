@@ -62,7 +62,7 @@ function createFeatures(earthquakeData) {
       fillColor: color,
       // Adjust radius
       radius: (properties.mag * 15000)
-    }).bindPopup("<h1>" + properties.place + "</h1> <hr> <h3>Magnitud: " + properties.mag.toFixed(2) + "</h3>");
+    }).bindPopup("<h1>" + properties.place + "</h1> <hr> <h3>Magnitude: " + properties.mag.toFixed(2) + "</h3>");
     //Add the cricle to the array
     myCircleArray.push(myCircle);
   }
@@ -82,7 +82,7 @@ function createFeatures(earthquakeData) {
   };
 
   // Add the layer to the map
-  var myMap = L.map("map", {
+  var myMap = L.map("mapid", {
     center: [37.09, -95.71],
     zoom: 5,
     layers: [streetmap,earthquakes]
